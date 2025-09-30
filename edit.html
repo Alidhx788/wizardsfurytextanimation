@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wizard's Fury</title>
+</head>
+
+<body>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: #000;
+            font-family: 'Arial', sans-serif;
+        }
+
+        h1 {
+            position: absolute;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: white;
+            text-align: center;
+            margin-bottom: 20px;
+            text-shadow: 0px 0px 10px cyan,
+                0px 0px 5px cyan;
+        }
+
+        main {
+            height: 100px;
+            width: 100%;
+            position: relative;
+            display: flex;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            font-family: "Oswald", sans-serif;
+            color: white;
+            background-color: rgb(125, 32, 211);
+            background: #000;
+        }
+
+        .filltxt,
+        .bordertxt {
+            height: 200px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            font-size: 50px;
+            font-weight: 700;
+            background-color: transparent;
+        }
+
+        .stick {
+            background-color: rgb(255, 255, 255);
+            animation: stick 5s ease-in-out infinite;
+            z-index: 1000;
+        }
+
+        @keyframes stick {
+            0% {
+                height: 0px;
+                width: 0px;
+                transform: translateX(0px);
+            }
+
+            12.5% {
+                height: 50px;
+                width: 5px;
+                transform: translateX(0px);
+            }
+
+            37.5% {
+                height: 50px;
+                width: 5px;
+                transform: translateX(400px);
+            }
+
+            62.5% {
+                height: 50px;
+                width: 5px;
+                transform: translateX(0px);
+            }
+
+            87.5% {
+                height: 50px;
+                width: 5px;
+                transform: translateX(400px);
+            }
+
+            100% {
+                height: 0px;
+                width: 5px;
+                transform: translateX(400px);
+            }
+        }
+
+
+        .st,
+        .nd {
+            height: 100px;
+            width: 400px;
+            background-color: #ff020281;
+            background-color: black;
+            animation: box 5s ease-in-out infinite;
+            z-index: 999;
+        }
+
+        @keyframes box {
+            0% {
+                transform: translateX(0px);
+                z-index: 999;
+            }
+
+            12.5% {
+                transform: translateX(0px);
+                z-index: 999;
+            }
+
+            37.5% {
+                transform: translateX(400px);
+                z-index: 2;
+            }
+
+            62.5% {
+                transform: translateX(0px);
+                z-index: 2;
+            }
+
+            87.5% {
+                transform: translateX(400px);
+                z-index: 2;
+            }
+
+            100% {
+                transform: translateX(400px);
+                z-index: 2;
+            }
+        }
+
+        .nd {
+            position: absolute;
+            background-color: rgba(0, 255, 255, 0.507);
+            background-color: black;
+            animation: nd 5s ease-in-out infinite;
+            z-index: 999;
+        }
+
+        @keyframes nd {
+            0% {
+                transform: translateX(-400px);
+            }
+
+            12.5% {
+                transform: translateX(-400px);
+            }
+
+            37.5% {
+                transform: translateX(-400px);
+            }
+
+            62.5% {
+                transform: translateX(-400px);
+            }
+
+            87.5% {
+                transform: translateX(0px);
+            }
+
+            100% {
+                transform: translateX(0px);
+            }
+        }
+
+        .filltxt {
+            color: white;
+            z-index: 1;
+        }
+
+        .filltxt p {
+            color: white;
+            letter-spacing: -1px;
+        }
+
+        .bordertxt {
+            z-index: 3;
+        }
+
+        .bordertxt p {
+            color: transparent;
+            letter-spacing: -1px;
+            -webkit-text-stroke: 1px white;
+        }
+    </style>
+    <h1>Wizard's Fury text animation</h1>
+    <main>
+        <div class="stick"></div>
+        <div class="st"></div>
+        <div class="nd"></div>
+        <div class="filltxt">
+            <p>WIZARD'S FURY</p>
+        </div>
+        <div class="bordertxt">
+            <p>WIZARD'S FURY</p>
+        </div>
+    </main>
+</body>
+
+</html>
